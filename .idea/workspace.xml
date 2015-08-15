@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/TestCase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -35,31 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBinary.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CountAndSay.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/solutions/string/CountAndSay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2265758">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddBinary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/solutions/string/AddBinary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67972744">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NumberFormatException.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk1.7.0_76/src.zip!/java/lang/NumberFormatException.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyAtoi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/solutions/string/MyAtoi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -86,8 +76,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/solutions/string/MyAtoi.java" />
-        <option value="$PROJECT_DIR$/src/TestCase.java" />
         <option value="$PROJECT_DIR$/src/solutions/string/AddBinary.java" />
+        <option value="$PROJECT_DIR$/src/TestCase.java" />
+        <option value="$PROJECT_DIR$/src/solutions/string/CountAndSay.java" />
       </list>
     </option>
   </component>
@@ -159,6 +150,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leetcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leetcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,12 +511,12 @@
       <option name="number" value="Default" />
       <updated>1439552200658</updated>
       <workItem from="1439552206606" duration="988000" />
-      <workItem from="1439631053996" duration="3882000" />
+      <workItem from="1439631053996" duration="5871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4870000" />
+    <option name="totallyTimeSpent" value="6859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
@@ -579,18 +588,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_76/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9028961">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/solutions/string/MyAtoi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.093696766">
           <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_76/src.zip!/java/lang/NumberFormatException.java">
+    <entry file="file://$PROJECT_DIR$/src/solutions/string/AddBinary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -598,17 +615,17 @@
     <entry file="file://$PROJECT_DIR$/src/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solutions/string/AddBinary.java">
+    <entry file="file://$PROJECT_DIR$/src/solutions/string/CountAndSay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67972744">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.2265758">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
