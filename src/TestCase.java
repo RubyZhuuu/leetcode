@@ -2,18 +2,14 @@
  * Created by ruby on 2015/8/14.
  */
 
-import solutions.string.LongestComminPrefix;
+import solutions.string.LengthOfLastWord;
 
 
 public class TestCase {
     public static void main(String[] args) {
-        LongestComminPrefix test = new LongestComminPrefix();
+        LengthOfLastWord test = new LengthOfLastWord();
 
-        String[] strs= {
-                "a"
-        };
-
-        System.out.println(test.longestCommonPrefix(strs));
+        System.out.println(test.lengthOfLastWord("jdh dkjs   dj"));
 
     }
 }
