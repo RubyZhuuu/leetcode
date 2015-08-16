@@ -2,14 +2,18 @@
  * Created by ruby on 2015/8/14.
  */
 
-import solutions.string.CountAndSay;
+import solutions.string.LongestComminPrefix;
 
 
 public class TestCase {
     public static void main(String[] args) {
-        CountAndSay test = new CountAndSay();
+        LongestComminPrefix test = new LongestComminPrefix();
 
-        System.out.println(test.countAndSay(4));
+        String[] strs= {
+                "a"
+        };
+
+        System.out.println(test.longestCommonPrefix(strs));
 
     }
 }
