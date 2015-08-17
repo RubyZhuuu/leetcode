@@ -2,14 +2,13 @@
  * Created by ruby on 2015/8/14.
  */
 
-import solutions.string.LengthOfLastWord;
+import array.ContainsDuplicate;
 
 
 public class TestCase {
     public static void main(String[] args) {
-        LengthOfLastWord test = new LengthOfLastWord();
-
-        System.out.println(test.lengthOfLastWord("jdh dkjs   dj"));
-
+        ContainsDuplicate test = new ContainsDuplicate();
+        int[] a= {50, 20, 30, 97, 65, 42, 3, 4, 19, 54};
+        System.out.println(test.containsDuplicate(a));
     }
 }
