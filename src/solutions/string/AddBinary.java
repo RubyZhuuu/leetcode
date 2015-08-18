@@ -1,32 +1,40 @@
 package solutions.string;
 
 /**
- * Created by ruby on 2015/8/14.
+ * Created by Ruby on 15/8/18.
  */
 public class AddBinary {
-    public int compareVersion(String version1, String version2) {
-        String[] v1;
-        String[] v2;
-        v1 = version1.split("\\.");
-        v2 = version2.split("\\.");
+    public String addBinary(String a, String b) {
 
-        int count = 0;
-        while(count < v1.length || count < v2.length) {
-            if(count == v1.length && count == v2.length)
-                return 0;
-            if(count == v1.length) {
-                return Integer.parseInt(v2[count]) == 0 ? 0 : -1;
-            }
-            if(count == v2.length) {
-                return Integer.parseInt(v1[count]) == 0 ? 0 : 1;
-            }
-            if(Integer.parseInt(v1[count]) > Integer.parseInt(v2[count]))
-                return  1;
-            if(Integer.parseInt(v1[count]) < Integer.parseInt(v2[count]))
-                return -1;
-            count ++;
+        StringBuffer res = new StringBuffer();
+
+        int index1 = a.length() - 1;
+        int index2 = b.length() - 1;
+        boolean OVERFLOW_FLAG = false;
+
+        while(index1 >= 0 || index2 >= 0) {
+            int arg1;
+            int arg2;
+            arg1 = index1 >= 0 ? Character.getNumericValue(a.charAt(index1)) : 0;
+            arg2 = index2 >= 0 ? Character.getNumericValue(b.charAt(index2)) : 0;
+            int sum = arg1 + arg2;
+
+            sum = OVERFLOW_FLAG ? sum + 1 : sum;
+
+            OVERFLOW_FLAG = false;
+
+            OVERFLOW_FLAG = sum >= 2 ? true : false;
+            res.append(Integer.toString(sum % 2));
+
+            index1 --;
+            index2 --;
         }
 
-        return 0;
+        if(OVERFLOW_FLAG)
+            res.append("1");
+
+        res.reverse();
+
+        return res.toString();
     }
 }
