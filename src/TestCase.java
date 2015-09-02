@@ -2,18 +2,21 @@
  * Created by ruby on 2015/8/14.
  */
 
-import array.RemoveElement;
+import math.CountPrimes;
+import math.PalindromeNumber;
+import array.medium.MinimunSizeSubarraySum;
+import dynamicProgramming.ClimbingStairs;
+
+import java.util.List;
 
 
 public class TestCase {
-    public static void main(String[] args) {
-        RemoveElement test = new RemoveElement();
-        int[] a= {3,7,6,3,5, 3, 3};
-        int afterLength = test.removeElement(a, 8);
 
-        System.out.println("after:" + afterLength);
-        for(int temp : a) {
-            System.out.println(temp);
-        }
+    public static void main(String[] args) {
+        ClimbingStairs test = new ClimbingStairs();
+        MinimunSizeSubarraySum t = new MinimunSizeSubarraySum();
+        int[] a= {1,3,4};
+        System.out.println(test.climbStairs(4));
+
     }
 }
