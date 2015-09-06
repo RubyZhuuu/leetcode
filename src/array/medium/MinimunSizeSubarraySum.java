@@ -5,6 +5,18 @@ package array.medium;
  */
 public class MinimunSizeSubarraySum {
     public int minSubArrayLen(int s, int[] nums) {
-        return 0;
+        int i =0, j =0, sum = 0;
+        int minLen = Integer.MAX_VALUE;
+
+        while(sum < s && j < nums.length) {
+            sum += nums[j ++];
+
+            while(sum >= s) {
+                minLen = j - i < minLen ? j - i : minLen ;
+                sum -= nums[i ++];
+            }
+        }
+
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
     }
 }
