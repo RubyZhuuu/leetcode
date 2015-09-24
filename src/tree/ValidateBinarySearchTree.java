@@ -10,30 +10,20 @@ package tree;
    Both the left and right subtrees must also be binary search trees.
  */
 public class ValidateBinarySearchTree {
-    private boolean compareLeft(TreeNode left, int val) {
-        if(left == null || left.val < val)
+    private boolean checkValid(TreeNode node, int small, int bigger) {
+        if(node == null)
             return true;
-        return false;
-    }
-
-    private boolean compareRight(TreeNode right, int val) {
-        if(right == null || right.val > val)
-            return true;
-        return false;
+        if(small == bigger)
+            return node.val < small;
+        return small < node.val && node.val < bigger;
     }
 
     public boolean isValidBST(TreeNode root) {
         if(root == null)
             return true;
-        boolean left =  compareLeft(root.left, root.val);
-        boolean right = compareRight(root.right, root.val);
+        boolean left =  checkValid(root.left, root.val, root.val);
+        boolean right = checkValid(root.right, root.val, root.val);
 
-        if(!left || !right)
-            return false;
-
-        if(!isValidBST(root.left))
-            return false;
-
-        return isValidBST(root.right);
+        return left && right;
     }
 }
