@@ -1,6 +1,8 @@
 package tree;
 
 
+import java.util.Stack;
+
 /**
  * Created by ruby on 2015/9/23.
  * Given a binary tree, determine if it is a valid binary search tree (BST).
@@ -10,20 +12,31 @@ package tree;
    Both the left and right subtrees must also be binary search trees.
  */
 public class ValidateBinarySearchTree {
-    private boolean checkValid(TreeNode node, int small, int bigger) {
-        if(node == null)
-            return true;
-        if(small == bigger)
-            return node.val < small;
-        return small < node.val && node.val < bigger;
-    }
 
     public boolean isValidBST(TreeNode root) {
         if(root == null)
             return true;
-        boolean left =  checkValid(root.left, root.val, root.val);
-        boolean right = checkValid(root.right, root.val, root.val);
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode node = root;
+        int prev = 0;
+        boolean flag = true;
 
-        return left && right;
+        while(!stack.isEmpty() || node != null) {
+            while(node != null) {
+                stack.add(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            if(flag) {
+                prev = node.val;
+                flag = false;
+            } else {
+                if(prev >= node.val)
+                    return false;
+                prev = node.val;
+            }
+            node = node.right;
+        }
+        return true;
     }
 }
