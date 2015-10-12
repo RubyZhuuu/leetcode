@@ -12,41 +12,37 @@ public class PopulatingNextRightPointers2 {
     public void connect(TreeLinkNode root) {
         TreeLinkNode layer = root;
         TreeLinkNode node;
+        TreeLinkNode prev;
 
         while(layer != null) {
             node = layer;
+            layer = null;
+            prev = null;
 
             while (node != null) {
                 if (node.left != null) {
-                    if (node.right != null)
-                        node.left.next = node.right;
+                    if(prev == null) {
+                        prev = node.left;
+                        layer = node.left;
+                    }
                     else {
-                        TreeLinkNode temp = node.next;
-                        while (temp != null) {
-                            node.left.next = temp.left != null ? temp.left : temp.right;
-                            if(node.left.next != null)
-                                break;
-                            temp = temp.next;
-                        }
+                        prev.next = node.left;
+                        prev = node.left;
                     }
                 }
 
                 if (node.right != null) {
-                    if(node.next == null)
-                        node.right.next = null;
+                    if(prev == null) {
+                        prev = node.right;
+                        layer = node.right;
+                    }
                     else {
-                        TreeLinkNode temp = node.next;
-                        while (temp != null) {
-                            node.right.next = temp.left != null ? temp.left : temp.right;
-                            if(node.right.next != null)
-                                break;
-                            temp = temp.next;
-                        }
+                        prev.next = node.right;
+                        prev = node.right;
                     }
                 }
                 node = node.next;
             }
-            layer = layer.left == null ? layer.right : layer.left;
         }
     }
 
