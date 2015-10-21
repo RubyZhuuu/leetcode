@@ -3,7 +3,9 @@ package tree;
 import java.util.List;
 
 /**
+ * no. 222
  * Created by Ruby on 2015/10/19 15:59.
+ * Given a complete binary tree, count the number of nodes.
  */
 public class CountComplateTreeNodes {
     public int countNodes(TreeNode root) {
@@ -20,17 +22,9 @@ public class CountComplateTreeNodes {
             left = left.left;
         }
 
-
         if(left == null)
             return (2 << rightLength) - 1;
         return  countNodes(root.left) + countNodes(root.right) + 1;
     }
 
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-
-        CountComplateTreeNodes p = new CountComplateTreeNodes();
-
-            System.out.println(p.countNodes(root));
-    }
 }
