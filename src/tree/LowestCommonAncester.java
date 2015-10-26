@@ -12,12 +12,6 @@ import sun.reflect.generics.tree.Tree;
 public class LowestCommonAncester {
     private TreeNode result;
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-
-        containsNode(root, p, q);
-        return result;
-    }
-
     //比较好的解法
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
         if(root == null)
@@ -35,6 +29,11 @@ public class LowestCommonAncester {
         return  left == null ? right : left;
     }
 
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+
+        containsNode(root, p, q);
+        return result;
+    }
 
     private boolean containsNode(TreeNode node, TreeNode p, TreeNode q) {
         if(node == null)
@@ -61,13 +60,4 @@ public class LowestCommonAncester {
         return true;
     }
 
-    public static void main(String[] args) {
-        LowestCommonAncester test = new LowestCommonAncester();
-
-        TreeNode root = new TreeNode(1);
-        TreeNode left = new TreeNode(2);
-        root.left = left;
-
-        System.out.print(test.lowestCommonAncestor(root, root, left));
-    }
 }
