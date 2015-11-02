@@ -26,6 +26,7 @@ public class FindTheDuplicteNumber {
             if(count <= mid - low + 1)
                 low = mid;
             else high = mid;
+            count = 0;
         }
 
         return mid;
