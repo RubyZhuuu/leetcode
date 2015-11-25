@@ -1,4 +1,4 @@
-package TwoPointers;
+package twoPointers;
 
 /**
  * Created by ruby on 2015/10/12.

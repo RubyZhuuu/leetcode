@@ -1,4 +1,4 @@
-package Backtracking;
+package backtracking;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -29,29 +29,49 @@ public class NQeens {
         return res;
     }
 
-    private boolean placeOnNRow(int colNum, int[] current, List<List<String>> res) {
+    private void placeOnNRow(int colNum, int[] current, List<List<String>> res) {
         if(colNum < 0)
-            return false;
+            return;
+
+        boolean FLAG = true;
 
         while(current[colNum] < current.length) {
+            FLAG = true;
             for(int i = colNum - 1; i >= 0 ; i --) {
-                if(current[i] != current[colNum] && Math.abs(i - colNum) == Math.abs(current[i] - current[colNum])) {
-
-                    if(colNum == current.length - 1) {
-                        res.add(formatList(current));
-                        placeOnNRow(colNum, new int[current.length], res);
-                        return true;
-                    }
-                    placeOnNRow(colNum + 1, current, res);
-                    return true;
+                if(current[i] == current[colNum] || Math.abs(i - colNum) == Math.abs(current[i] - current[colNum])) {
+                    FLAG = false;
                 }
             }
+
+            if(FLAG == true)
+                break;
             current[colNum] ++;
         }
 
-            current[colNum] = 0;
-            return placeOnNRow(colNum - 1, current, res);
-
+        if(FLAG == true) {
+            if(colNum == current.length - 1) {
+                res.add(formatList(current));
+                current[colNum] += 1;
+                //placeOnNRow(colNum, current, res);
+            }
+            else
+                placeOnNRow(colNum + 1, current, res);
+        } else {
+            if(colNum == 0) {
+                current[colNum] += 1;
+                placeOnNRow(0, current, res);
+            }
+            else{
+                current[colNum] = 0;
+                current[colNum - 1] += 1;
+                if (current[colNum - 1] < current.length)
+                    placeOnNRow(colNum - 1, current, res);
+                else {
+                    current[colNum - 2] += 1;
+                    placeOnNRow(colNum - 2, current, res);
+                }
+            }
+        }
     }
 
     private List<String> formatList(int[] current) {
