@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * no.51
  * Created by Ruby on 2015/11/9 16:20.
- * The n-queens puzzle is the problem of placing n queens on an n¡Án chessboard such that no two queens attack each other.
+ * The n-queens puzzle is the problem of placing n queens on an nï¿½ï¿½n chessboard such that no two queens attack each other.
  * Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space respectively.
  * For example,
  * There exist two distinct solutions to the 4-queens puzzle:
@@ -50,7 +50,7 @@ public class NQeens {
 
         if(FLAG == true) {
             if(colNum == current.length - 1) {
-                res.add(formatList(current));
+                //res.add(formatList(current));
                 current[colNum] += 1;
                 //placeOnNRow(colNum, current, res);
             }
@@ -74,33 +74,19 @@ public class NQeens {
         }
     }
 
-    private List<String> formatList(int[] current) {
-
-        List<String> list = new LinkedList<>();
-
-        for(int i : current) {
-            StringBuffer s = new StringBuffer();
-            int j;
-            for(j = 0; j < i; j ++) {
-                s.append('.');
-            }
-            s.append('Q');
-            for(j = i + 1; j < current.length; j ++)
-                s.append('.');
-
-            list.add(s.toString());
-        }
-
-        return list;
+    private boolean isValid() {
+        return true;
     }
 
     public static void main(String[] args) {
         NQeens test = new NQeens();
-        List<List<String>> res = test.solveNQueens(4);
+        List<List<String>> res = test.solveNQueens(9);
         for(List<String> l : res) {
             for(String s : l) {
                 System.out.println(s);
             }
+
+            System.out.println("-------------------------");
         }
     }
 }
