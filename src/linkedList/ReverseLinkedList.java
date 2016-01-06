@@ -1,6 +1,7 @@
 package linkedList;
 
 /**
+ * no 206
  * Created by ruby on 2015/9/2.
  */
 
@@ -31,24 +32,14 @@ public class ReverseLinkedList {
         return pNode;
     }
 
-    public static void main(String[] args) {
-        ListNode head = new ListNode(2);
-        ListNode node = head;
+    public ListNode reverseList2(ListNode head) {
+        if(head == null || head.next == null)
+            return head;
+        ListNode newHead = reverseList2(head.next);
+        head.next.next = head;
+        head.next = null;
 
-        for(int i = 3; i < 10; i ++) {
-            ListNode temp = new ListNode(i);
-            node.next = temp;
-            node = temp;
-        }
-
-        ReverseLinkedList r = new ReverseLinkedList();
-
-        node = r.reverseList(head);
-
-        while(node != null) {
-            System.out.print(node.val);
-            node = node.next;
-        }
+        return newHead;
     }
 
 }
