@@ -9,7 +9,4 @@ package linkedList;
  * Created by Ruby on 2016/1/6 13:58.
  */
 public class ReverseLinkedList2 {
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-
-    }
 }
